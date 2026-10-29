@@ -1,0 +1,26 @@
+# Dependencies - Never push this, it's huge
+node_modules/
+package-lock.json
+
+# Secrets - NEVER push your real Atlas password
+.env
+
+# Logs
+npm-debug.log*
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Tools junk (your .qodo folder)
+.qodo/
+
+# OS and Editor
+.vscode/
+.idea/
+
+# Build
+dist/
+build/

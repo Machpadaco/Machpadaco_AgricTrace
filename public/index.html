@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Machpadaco AgriTrace - Agricultural Accountability</title>
+
+  <!-- Favicon - Machpadaco Branded Logo -->
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+
+  <!-- External CSS - All logo styles now in css/style.css -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <img src="img/logo.png" alt="Machpadaco Global Services Logo - Digital Skills Empowering Success" class="brand-logo" />
+        <div class="logo">MACHPADACO <span>AgriTrace</span></div>
+      </div>
+      <span class="module-badge">FERTILIZER MODULE PILOT</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Machpadaco AgriTrace <span class="badge">EXPANDABLE TO SEEDS • PESTICIDES • PRODUCE</span></h1>
+    <p class="subtitle">Machpadaco Global Services (machpadaco.com) | Digital Agricultural Input Accountability System | 3MTT x Meta Capstone - Fictional Data Only</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Screen 1: Farmer Registration</h2>
+        <p class="card-desc">Fair beneficiary selection - duplicate safeguard</p>
+        <input id="fid" type="text" placeholder="Farmer ID e.g., FAR-RIV-001" />
+        <input id="fname" type="text" placeholder="Full Name" />
+        <input id="fcommunity" type="text" placeholder="Community / LGA" />
+        <input id="fcontact" type="text" placeholder="Contact (privacy protected)" />
+        <input id="fcrop" type="text" placeholder="Crop e.g., Rice, Maize" />
+        <select id="fstatus">
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+        <input id="freason" type="text" placeholder="Eligibility Reason" />
+        <button onclick="registerFarmer()">Register Farmer</button>
+        <div id="fresult" class="result"></div>
+      </div>
+
+      <div class="card">
+        <h2>Screen 2: Allocation & Tracking</h2>
+        <p class="card-desc">Every movement recorded - fertilizer tracking</p>
+        <input id="prog" type="text" placeholder="Programme Name" value="Fertilizer Pilot Programme" />
+        <input id="ftype" type="text" placeholder="Fertilizer Type e.g., NPK 15-15-15" />
+        <input id="acomm" type="text" placeholder="Community" />
+        <input id="abags" type="number" placeholder="Bags Allocated" />
+        <input id="batch" type="text" placeholder="Batch Ref e.g., BATCH-RIV-2026-001" />
+        <input id="dispatched" type="number" placeholder="Bags Dispatched" />
+        <input id="received" type="number" placeholder="Bags Received At Centre" />
+        <button onclick="addAllocation()">Add Allocation</button>
+        <div id="aresult" class="result"></div>
+      </div>
+
+      <div class="card">
+        <h2>Screen 3: Distribution & Receipt</h2>
+        <p class="card-desc">Independent farmer confirmation - Simulated OTP</p>
+        <input id="rfid" type="text" placeholder="Farmer ID" />
+        <input id="rapproved" type="number" placeholder="Approved Allocation" />
+        <input id="rissued" type="number" placeholder="Quantity Issued" />
+        <input id="rreceived" type="number" placeholder="Quantity Received (farmer confirms)" />
+        <input id="rpoint" type="text" placeholder="Distribution Point" />
+        <div class="otp-row">
+          <button onclick="generateOTP()" class="secondary">Generate OTP</button>
+          <span id="otpDisplay" class="otp-display">---- No OTP ----</span>
+        </div>
+        <input id="rotp" type="text" placeholder="Enter Simulated OTP" />
+        <button onclick="confirmReceipt()">Confirm Receipt</button>
+        <div id="rresult" class="result"></div>
+      </div>
+
+      <div class="card wide">
+        <h2>Screen 4: Accountability Dashboard</h2>
+        <p class="card-desc">Flags discrepancies - does NOT auto-accuse fraud</p>
+        <button onclick="loadDashboard()">Load Dashboard - Machpadaco Principle</button>
+        <div id="dashboard" class="dashboard"></div>
+        <div class="warning">
+          <strong>Machpadaco Principle:</strong> Flags for review, not accusation.<br/>
+          Fictional data - e.g., 1000 bags pilot: 760 confirmed vs 240 flagged.<br/>
+          Distinguishes: confirmed shortages, awaiting confirmation, genuine losses.<br/>
+          <strong>Future modules:</strong> Seeds, Pesticides, Produce Traceability - same audit trail.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo-area">
+      <img src="img/logo.png" alt="Machpadaco" class="brand-logo-small" />
+      <span>© Machpadaco Global Services - machpadaco.com | Built with Llama, Node.js, MongoDB | #0F172A #1491A2 #06B6D4</span>
+    </div>
+    <p>Fictional Data Only - 3MTT x Meta Capstone - Fertilizer Module Pilot</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
