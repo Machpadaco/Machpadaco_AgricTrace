@@ -336,7 +336,7 @@ PORT
 MongoDB Atlas whitelist Render IP or allow all
 0.0.0.0/0
 Live Demo:
-[Add Render URL here]
+https://machpadaco-agrictrace.onrender.com
 e.g.,
 https://machpadaco-agritrace.onrender.com
 9. Tech Stack
